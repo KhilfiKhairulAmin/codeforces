@@ -2,10 +2,11 @@ lineIn = lambda: [int(x) for x in input().split(" ")]
 
 n, m, v = lineIn()
 
-m_v = (n-1)*(n-2) / 2 + 1
+m_max = (n-1)*(n-2) / 2 + 1
+m_min = n - 1
 
 # Determine if possible or not
-if m > m_v:
+if m > m_max or m < m_min:
   print(-1)
 else:
   verts = [x for x in range(1, n+1)]
